@@ -18,7 +18,27 @@ $(window).ready(function() {
 
     }
 
-    function createTable() {
+    function createTable(rows, cols) {
+
+        var tableCode = '<table>\n';
+
+        for (var i = 0; i < rows; i++) {
+
+            tableCode += '<tr>\n';
+
+            for (var j = 0; j < cols; j++) {
+
+                tableCode += '<td></td>\n'
+
+            }
+
+            tableCode += '</tr>\n';
+
+        }
+
+        tableCode += '</table>';
+
+        $('.table-board').html(tableCode);
 
     }
 
@@ -188,7 +208,13 @@ $(window).ready(function() {
 
     });
 
-    $('.table-board td').click(function() {
+    $('.save-table').click(function() {
+
+        $('.table-board table td.hidden').detach();
+
+    });
+
+    $('.table-board').on('click', 'td', function() {
 
         $('.cell-editing div').removeClass('disabled');
 
