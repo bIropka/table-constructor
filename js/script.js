@@ -28,7 +28,7 @@ $(window).ready(function() {
 
             for (var j = 0; j < cols; j++) {
 
-                tableCode += '<td></td>\n'
+                tableCode += '<td class="cell_' + i + "-" + j + '"></td>\n'
 
             }
 
