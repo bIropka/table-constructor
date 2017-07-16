@@ -20,7 +20,7 @@ $(window).ready(function() {
 
     function createTable(rows, cols) {
 
-        var tableCode = '<table>\n';
+        var tableCode = '<table class="table-generated">\n';
 
         for (var i = 0; i < rows; i++) {
 
